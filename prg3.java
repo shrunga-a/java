@@ -22,8 +22,9 @@ public class prg3 {
         con.append(s.toUpperCase());
         System.out.println("the upper case is="+s.toUpperCase());
         System.out.println("enter the string to append");
-        Scanner ap =new Scanner(System.in);
-        s= ap.next();
+        try (Scanner ap = new Scanner(System.in)) {
+            s= ap.next();
+        }
         System.out.println("the string after appending"+con.append(s));
        
 
